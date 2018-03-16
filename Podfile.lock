@@ -1,0 +1,48 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - QFHome (0.8.0):
+    - AFNetworking (~> 3.1.0)
+    - SDWebImage (~> 4.1.2)
+  - QFMe (0.7.0):
+    - QFRouter (~> 0.1.0)
+    - SDWebImage (~> 4.1.2)
+  - QFRouter (0.1.0)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
+  - Tools (0.2.0):
+    - AFNetworking (~> 3.1.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.1.0)
+  - QFHome (~> 0.8.0)
+  - QFMe (~> 0.7.0)
+  - QFRouter (~> 0.1.0)
+  - SDWebImage (~> 4.1.2)
+  - Tools (~> 0.2.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  QFHome: c07f73f07821dfc0a9c5584a7e21f359c72b5315
+  QFMe: c691b06d022bcdd7bfe784796bd1b172cb44d1d8
+  QFRouter: 133268d5af628bd1c8aa41ff8539852eefdcdcc4
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
+  Tools: 2c01440c1c036d7bb6a401bb2bc7b33611594083
+
+PODFILE CHECKSUM: b3fe1df5d8b0ca9e55a1ae22c91f40284fba0dcf
+
+COCOAPODS: 1.4.0

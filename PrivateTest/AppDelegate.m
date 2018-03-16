@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "QFMediator.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor    = [UIColor whiteColor];
+    UITabBarController *tabbarController = [[UITabBarController alloc] init];
+    
+    UINavigationController *homeNavi =
+    [[QFMediator sharedInstance]performActionWithUrl:[NSURL URLWithString:@"http://A/Home?page=1&abc=123"] completion:nil];
+
+    UINavigationController *meNavi = [[QFMediator sharedInstance]performActionWithUrl:[NSURL URLWithString:@"http://Me/Me?page=1&abc=321"] completion:nil];
+    
+    tabbarController.viewControllers = @[homeNavi,meNavi];
+    
+    self.window.rootViewController = tabbarController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
