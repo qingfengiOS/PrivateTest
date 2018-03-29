@@ -27,7 +27,8 @@
 }
 
 - (void)pushAction {
-    UIViewController *VC = [[QFMediator sharedInstance]performActionWithUrl:[NSURL URLWithString:@"http://A/nativeFetchDetailViewController?page=1&abc=123"] completion:nil returnValueBlock:nil];
+    
+    UIViewController *VC = [[QFMediator sharedInstance]performTarget:@"A" action:@"nativeFetchDetailViewController" paramter:@{@"page":@"1",@"name":@"qingfeng"} shouldCacheTarget:YES];
     [self.navigationController pushViewController:VC animated:YES];
 }
 
