@@ -22,9 +22,9 @@
     UITabBarController *tabbarController = [[UITabBarController alloc] init];
     
     UINavigationController *homeNavi =
-    [[QFMediator sharedInstance]performActionWithUrl:[NSURL URLWithString:@"http://A/Home?page=1&abc=123"] completion:nil];
+    [[QFMediator sharedInstance]performActionWithUrl:[NSURL URLWithString:@"http://A/Home?page=1&abc=123"] completion:nil returnValueBlock:nil];
 
-    UINavigationController *meNavi = [[QFMediator sharedInstance]performActionWithUrl:[NSURL URLWithString:@"http://Me/Me?page=1&abc=321"] completion:nil];
+    UINavigationController *meNavi = [[QFMediator sharedInstance]performActionWithUrl:[NSURL URLWithString:@"http://Me/Me?page=1&abc=321"] completion:nil returnValueBlock:nil];
     
     tabbarController.viewControllers = @[homeNavi,meNavi];
     

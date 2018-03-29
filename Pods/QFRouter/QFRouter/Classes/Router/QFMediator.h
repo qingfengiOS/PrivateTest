@@ -8,8 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^returnValueBlock)(NSDictionary *dic);
+
+@protocol QFMediatorDelegate <NSObject>
+
+- (void)returnValue:(NSDictionary *)dic;
+
+@end
+
 @interface QFMediator : NSObject
 
+@property (nonatomic, copy) returnValueBlock valueBlock;
 
 /**
  创建单例路由
@@ -25,7 +34,7 @@
  @param url 远程url
  @param completion 回调
  */
-- (id)performActionWithUrl:(NSURL *)url completion:(void (^)(NSDictionary *info))completion;
+- (id)performActionWithUrl:(NSURL *)url completion:(void (^)(NSDictionary *info))completion returnValueBlock:(returnValueBlock)valueBlock;
 
 
 /**
@@ -45,4 +54,13 @@
  @param targetName 目标
  */
 - (void)releaseCachedTargetWithTargetName:(NSString *)targetName;
+
+
+/**
+ 路由回调参数
+
+ @param dic 参数字典
+ */
+- (void)testBlocks:(NSDictionary *)dic;
+
 @end

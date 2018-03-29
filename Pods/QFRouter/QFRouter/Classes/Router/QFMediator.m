@@ -34,13 +34,14 @@ static QFMediator *mediator;
     return mediator;
 }
 
+
 /**
  远程调用
  
  @param url 远程url
  @param completion 回调
  */
-- (id)performActionWithUrl:(NSURL *)url completion:(void (^)(NSDictionary *info))completion {
+- (id)performActionWithUrl:(NSURL *)url completion:(void (^)(NSDictionary *info))completion returnValueBlock:(returnValueBlock)valueBlock{
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     NSString *urlString = [url query];
     for (NSString *param in [urlString componentsSeparatedByString:@"&"]) {
@@ -63,6 +64,12 @@ static QFMediator *mediator;
         } else {
             completion(nil);
         }
+    }
+    
+    if (valueBlock) {
+        self.valueBlock = ^(NSDictionary *dic) {
+            valueBlock(dic);
+        };
     }
     return result;
 }
@@ -131,7 +138,18 @@ static QFMediator *mediator;
     [self.cachedTarget removeObjectForKey:targetClassString];
 }
 
+/**
+ 路由回调参数
+ 
+ @param dic 参数字典
+ */
+- (void)testBlocks:(NSDictionary *)dic {
+    if (self.valueBlock) {
+        self.valueBlock(dic);
+    }
+}
 
+#pragma mark - private method
 - (id)safePerformAction:(SEL)action target:(NSObject *)target params:(NSDictionary *)params
 {
     NSMethodSignature* methodSig = [target methodSignatureForSelector:action];
