@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		399467C6EC9C9010DCFD7A35 /* libPods-PrivateTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFDA348EF579DFFE9590724 /* libPods-PrivateTest.a */; };
 		8540446820566F1200E3AD8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8540446720566F1200E3AD8A /* AppDelegate.m */; };
 		8540446E20566F1200E3AD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8540446C20566F1200E3AD8A /* Main.storyboard */; };
 		8540447020566F1200E3AD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8540446F20566F1200E3AD8A /* Assets.xcassets */; };
@@ -15,6 +14,7 @@
 		8540447620566F1200E3AD8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8540447520566F1200E3AD8A /* main.m */; };
 		8540448020566F1200E3AD8A /* PrivateTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8540447F20566F1200E3AD8A /* PrivateTestTests.m */; };
 		8540448B20566F1200E3AD8A /* PrivateTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8540448A20566F1200E3AD8A /* PrivateTestUITests.m */; };
+		E6C217192A14235EC506B9F5 /* Pods_PrivateTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D49494FD0E895849F785E0F /* Pods_PrivateTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D49494FD0E895849F785E0F /* Pods_PrivateTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivateTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47B2FD89F402FE4A233BFD4D /* Pods-PrivateTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivateTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PrivateTest/Pods-PrivateTest.release.xcconfig"; sourceTree = "<group>"; };
 		8540446320566F1200E3AD8A /* PrivateTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivateTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8540446620566F1200E3AD8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,7 +51,6 @@
 		8540448620566F1200E3AD8A /* PrivateTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrivateTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8540448A20566F1200E3AD8A /* PrivateTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivateTestUITests.m; sourceTree = "<group>"; };
 		8540448C20566F1200E3AD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FFDA348EF579DFFE9590724 /* libPods-PrivateTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrivateTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28DC2000B84FD162AA5F95E /* Pods-PrivateTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivateTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PrivateTest/Pods-PrivateTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				399467C6EC9C9010DCFD7A35 /* libPods-PrivateTest.a in Frameworks */,
+				E6C217192A14235EC506B9F5 /* Pods_PrivateTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +83,7 @@
 		450AE8DF8BB1CD340778EBBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FFDA348EF579DFFE9590724 /* libPods-PrivateTest.a */,
+				2D49494FD0E895849F785E0F /* Pods_PrivateTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -162,8 +162,7 @@
 				8540445F20566F1200E3AD8A /* Sources */,
 				8540446020566F1200E3AD8A /* Frameworks */,
 				8540446120566F1200E3AD8A /* Resources */,
-				6C13E3E3B6DCDDCFBE9E65D2 /* [CP] Embed Pods Frameworks */,
-				3A1DD83AD4C66E5684206C10 /* [CP] Copy Pods Resources */,
+				9721C30E9D52D6B9E2739CB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,36 +282,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3A1DD83AD4C66E5684206C10 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrivateTest/Pods-PrivateTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C13E3E3B6DCDDCFBE9E65D2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrivateTest/Pods-PrivateTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		85582E3DEA09EF9666720EF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,6 +298,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9721C30E9D52D6B9E2739CB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PrivateTest/Pods-PrivateTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/QFHome/QFHome.framework",
+				"${BUILT_PRODUCTS_DIR}/QFMe/QFMe.framework",
+				"${BUILT_PRODUCTS_DIR}/QFRouter/QFRouter.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Tools/Tools.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QFHome.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QFMe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QFRouter.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tools.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PrivateTest/Pods-PrivateTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
-
 /// 展示文本
 @property (nonatomic, copy) NSString *showStr;
-
 @end

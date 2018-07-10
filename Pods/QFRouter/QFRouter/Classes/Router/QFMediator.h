@@ -22,7 +22,7 @@ typedef void(^returnValueBlock)(NSDictionary *dic);
 
 /**
  创建单例路由
-
+ 
  @return 单例路由实例
  */
 + (instancetype)sharedInstance;
@@ -30,7 +30,7 @@ typedef void(^returnValueBlock)(NSDictionary *dic);
 
 /**
  远程调用
-
+ 
  @param url 远程url
  @param completion 回调
  */
@@ -39,7 +39,7 @@ typedef void(^returnValueBlock)(NSDictionary *dic);
 
 /**
  内部组件掉用
-
+ 
  @param targetName 目标
  @param actionName 实际任务
  @param paramter 参数
@@ -50,7 +50,7 @@ typedef void(^returnValueBlock)(NSDictionary *dic);
 
 /**
  清缓存
-
+ 
  @param targetName 目标
  */
 - (void)releaseCachedTargetWithTargetName:(NSString *)targetName;
@@ -58,7 +58,7 @@ typedef void(^returnValueBlock)(NSDictionary *dic);
 
 /**
  路由回调参数
-
+ 
  @param dic 参数字典
  */
 - (void)testBlocks:(NSDictionary *)dic;

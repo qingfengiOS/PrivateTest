@@ -16,8 +16,11 @@
 {
     // 因为action是从属于ModuleA的，所以action直接可以使用ModuleA里的所有声明
     DetailViewController *viewController = [[DetailViewController alloc] init];
-    NSArray *content = [params allValues];
-    viewController.showStr = [NSString stringWithFormat:@"%@",content[0]];
+    __block NSString *str = @"";
+    [params enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+        str = [str stringByAppendingString:obj];
+    }];
+    viewController.showStr = str;
     return viewController;
 }
 

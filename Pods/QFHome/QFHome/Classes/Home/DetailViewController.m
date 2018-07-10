@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "QFMediator.h"
+#import "NextViewController.h"
 
 @interface DetailViewController ()
 
@@ -17,15 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     self.view.backgroundColor = [UIColor whiteColor];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"back" style:UIBarButtonItemStylePlain target:self action:@selector(back)];
     self.navigationItem.leftBarButtonItem = leftItem;
-    UILabel *showLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 100, 60)];
-    showLabel.text = self.showStr;
-    showLabel.center = self.view.center;
-    showLabel.backgroundColor = [UIColor lightGrayColor];
-    [self.view addSubview:showLabel];
+    UIButton *showButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 100, 60)];
+    [showButton setTitle:self.showStr forState:UIControlStateNormal];
+    showButton.center = self.view.center;
+    showButton.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:showButton];
+    [showButton addTarget:self action:@selector(showButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)showButtonAction {
+    NextViewController *VC = [[NextViewController alloc]init];
+    [self.navigationController pushViewController:VC animated:YES];
 }
 
 - (void)dealloc {
@@ -33,7 +41,7 @@
 }
 
 - (void)back {
-
+    
     [self.navigationController popViewControllerAnimated:YES];
     [[QFMediator sharedInstance] testBlocks:@{@"key":@"block return value"}];//block传值
 }

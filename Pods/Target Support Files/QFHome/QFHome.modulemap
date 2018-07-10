@@ -1,0 +1,6 @@
+framework module QFHome {
+  umbrella header "QFHome-umbrella.h"
+
+  export *
+  module * { export * }
+}

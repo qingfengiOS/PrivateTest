@@ -14,13 +14,14 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - QFHome (0.8.0):
+  - QFHome (0.8.3):
     - AFNetworking (~> 3.1.0)
+    - QFRouter (~> 0.1.1)
     - SDWebImage (~> 4.1.2)
   - QFMe (0.7.0):
     - QFRouter (~> 0.1.0)
     - SDWebImage (~> 4.1.2)
-  - QFRouter (0.1.0)
+  - QFRouter (0.1.1)
   - SDWebImage (4.1.2):
     - SDWebImage/Core (= 4.1.2)
   - SDWebImage/Core (4.1.2)
@@ -29,20 +30,30 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - QFHome (~> 0.8.0)
+  - QFHome (~> 0.8.3)
   - QFMe (~> 0.7.0)
-  - QFRouter (~> 0.1.0)
+  - QFRouter (~> 0.1.1)
   - SDWebImage (~> 4.1.2)
   - Tools (~> 0.2.0)
 
+SPEC REPOS:
+  https://gitee.com/qingfengiOS/QFSpec.git:
+    - QFHome
+    - QFMe
+    - QFRouter
+    - Tools
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - SDWebImage
+
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  QFHome: c07f73f07821dfc0a9c5584a7e21f359c72b5315
+  QFHome: 9350ba051f8ad3d113bd5766e390fd10583cedd1
   QFMe: c691b06d022bcdd7bfe784796bd1b172cb44d1d8
-  QFRouter: 133268d5af628bd1c8aa41ff8539852eefdcdcc4
+  QFRouter: 22628af244b09df2e596bee6df6a6e59a8191f84
   SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   Tools: 2c01440c1c036d7bb6a401bb2bc7b33611594083
 
-PODFILE CHECKSUM: b3fe1df5d8b0ca9e55a1ae22c91f40284fba0dcf
+PODFILE CHECKSUM: ce3936372a9111fb7c3441f67bcebe2475be6c1c
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
